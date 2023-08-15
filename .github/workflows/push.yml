@@ -8,10 +8,10 @@ jobs:
       - name: Extract Version
         id: version_step
         run: |
-          echo "##[set-output name=latest_tag;]$GITHUB_REPOSITORY:latest"
+          echo "latest_tag=$GITHUB_REPOSITORY:latest" >> $GITHUB_ENV
       - name: Print Version
         run: |
-          echo ${{steps.version_step.outputs.latest_tag}}
+          echo $latest_tag
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
 
@@ -21,13 +21,13 @@ jobs:
       - name: Login to DockerHub
         uses: docker/login-action@v1
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_ACCESS_TOKEN }}
 
       - name: PrepareReg Names
         id: read-docker-image-identifiers
         run: |
-          echo LASTEST_TAG=$(echo ${{ steps.version_step.outputs.latest_tag  }} | tr '[:upper:]' '[:lower:]') >> $GITHUB_ENV
+          echo LASTEST_TAG=$(echo $latest_tag | tr '[:upper:]' '[:lower:]') >> $GITHUB_ENV
       - name: Build and push
         id: docker_build
         uses: docker/build-push-action@v2
@@ -36,4 +36,4 @@ jobs:
           tags: |
             ${{env.LASTEST_TAG}}
           build-args: |
-            ${{steps.version_step.outputs.version}}
+            $latest_tag
