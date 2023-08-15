@@ -17,5 +17,20 @@ go install
 ./searchstax-mock-api
 ```
 
+### Docker
+```bash
+
+docker run -p 3000:3000 sadokf/searchstax-mock-api
+```
+
+### Accessing the server:
+
+```bash
+curl -XPOST localhost:3000/api/rest/v2/obtain-auth-token/
+
+{
+  "token": "aa70cb0a180a0532ae8855f7a1712eeceb81e080"
+}
+```
 ### Forked from
 https://github.com/tkc/go-json-server
