@@ -1,0 +1,23 @@
+{
+    "count": 1,
+    "next": null,
+    "previous": null,
+    "results": [
+      {
+        "id": 2,
+        "account": "test_account_name",
+        "region": "us-east1",
+        "status": "Active",
+        "address_space": "10.63.0.0/16",
+        "name": "test-vpc"
+      },
+      {
+        "id": 3,
+        "account": "test_account_name",
+        "region": "us-west-2",
+        "status": "Active",
+        "address_space": "10.43.0.0/16",
+        "name": "test-vpc-2"
+      }
+    ]
+  }

@@ -18,6 +18,12 @@
       "status": 200,
       "path": "/account/test_account_name/deployment/",
       "jsonPath": "/deployments_list.json"
+    },
+    {
+      "method": "GET",
+      "status": 200,
+      "path": "/account/test_account_name/privatevpc/",
+      "jsonPath": "/privatevpc_list.json"
     }
   ]
 }
