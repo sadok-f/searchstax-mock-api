@@ -8,6 +8,8 @@ import (
 	"net/http"
 	"os"
 	"strconv"
+
+	"github.com/gorilla/mux"
 )
 
 const (
@@ -83,7 +85,6 @@ type Endpoint struct {
 	Status   int    `json:"status"`
 	Path     string `json:"path"`
 	JsonPath string `json:"jsonPath"`
-	Folder   string `json:"folder"`
 }
 
 type API struct {
@@ -108,16 +109,14 @@ func main() {
 		log.Fatal(" ", err)
 	}
 
+	m := mux.NewRouter()
 	for _, ep := range api.Endpoints {
-		log.Print(apiPrefix+ep.Path, " -> ", folderPrefix+ep.JsonPath)
-		if len(ep.Folder) > 0 {
-			http.Handle(ep.Path+"/", http.StripPrefix(ep.Path+"/", http.FileServer(http.Dir(ep.Folder))))
-		} else {
-			http.HandleFunc(apiPrefix+ep.Path, response)
-		}
+		log.Print(ep.Method, " : ", apiPrefix+ep.Path, " -> ", folderPrefix+ep.JsonPath)
+		m.HandleFunc(apiPrefix+ep.Path, response).Methods(ep.Method)
+
 	}
 
-	err = http.ListenAndServe(":"+strconv.Itoa(api.Port), nil)
+	err = http.ListenAndServe(":"+strconv.Itoa(api.Port), m)
 
 	if err != nil {
 		log.Fatal(" ", err)

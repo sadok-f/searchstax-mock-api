@@ -1,0 +1,59 @@
+{
+  "name": "SolrFromAPI",
+  "uid": "ss123456",
+  "application": "Solr",
+  "application_version": "7.7.2",
+  "tier": "Silver",
+  "http_endpoint": "https://ss123456-hjmll0ug-us-west-1-aws.searchstax.com/solr/",
+  "status": "Running",
+  "provision_state": "Done",
+  "termination_lock": true,
+  "plan_type": "DedicatedDeployment",
+  "plan": "NDN1",
+  "is_master_slave": false,
+  "vpc_type": "Public",
+  "vpc_name": "",
+  "region_id": "us-west-1",
+  "cloud_provider": "Amazon Web Services",
+  "cloud_provider_id": "aws",
+  "num_additional_app_nodes": 0,
+  "deployment_type": "Dedicated Node",
+  "num_nodes_default": 1,
+  "num_zookeeper_nodes_default": 0,
+  "num_additional_zookeeper_nodes": 0,
+  "servers": [
+    "ss123456-1"
+  ],
+  "zookeeper_ensemble": "ss123456-hjmll0ug-1-us-west-1-aws.searchstax.com:2181",
+  "tag": [
+    "DoNotDelete"
+  ],
+  "specifications": {
+    "jvm_heap_memory": "536870912",
+    "disk_space": "8589934592",
+    "physical_memory": "1073741824"
+  },
+  "backups_enabled": false,
+  "dr_enabled": false,
+  "sla_active": false,
+  "state_changed": "1571931445",
+  "term_end": null,
+  "date_created": "2019-10-24",
+  "application_nodes_count": 1,
+  "selected_node_count": 0,
+  "savings": {
+    "one_year_saving_perc": "52.50",
+    "three_year_saving_perc": "64.38"
+  },
+  "dr_plan_type": null,
+  "subscription": "monthly",
+  "security_pack": false,
+  "desired_tier": null,
+  "backup": null,
+  "onboarding": false,
+  "selected_plan_memory": 0.0,
+  "selected_plan_storage": 0.0,
+  "dr": null,
+  "payment_method": null,
+  "purchase_order": null
+}

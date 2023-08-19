@@ -16,14 +16,26 @@
     {
       "method": "GET",
       "status": 200,
-      "path": "/account/test_account_name/deployment/",
-      "jsonPath": "/deployments_list.json"
+      "path": "/account/test_account_name/privatevpc/",
+      "jsonPath": "/privatevpc_list.json"
     },
     {
       "method": "GET",
       "status": 200,
-      "path": "/account/test_account_name/privatevpc/",
-      "jsonPath": "/privatevpc_list.json"
+      "path": "/account/test_account_name/deployment/",
+      "jsonPath": "/deployments_list.json"
+    },
+    {
+      "method": "POST",
+      "status": 200,
+      "path": "/account/test_account_name/deployment/",
+      "jsonPath": "/deployment_add.json"
+    },
+    {
+      "method": "GET",
+      "status": 200,
+      "path": "/account/test_account_name/deployment/ss123456",
+      "jsonPath": "/deployment_details.json"
     }
   ]
 }

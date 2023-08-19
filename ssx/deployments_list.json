@@ -18,7 +18,7 @@
             "is_master_slave": false,
             "vpc_type": "Public",
             "vpc_name": "",
-            "region_id": "us-west-1",
+            "region_id": "us-west-2",
             "cloud_provider": "Amazon Web Services",
             "cloud_provider_id": "aws",
             "num_additional_app_nodes": 0,
