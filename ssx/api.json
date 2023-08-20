@@ -34,8 +34,14 @@
     {
       "method": "GET",
       "status": 200,
-      "path": "/account/test_account_name/deployment/ss123456",
+      "path": "/account/test_account_name/deployment/ss123456/",
       "jsonPath": "/deployment_details.json"
+    },
+    {
+      "method": "DELETE",
+      "status": 200,
+      "path": "/account/test_account_name/deployment/ss123456/",
+      "jsonPath": "/deployment_delete.json"
     }
   ]
 }

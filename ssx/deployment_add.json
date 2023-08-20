@@ -2,20 +2,20 @@
     "name": "SolrFromAPI",
     "uid": "ss123456",
     "application": "Solr",
-    "application_version": "7.5.0",
+    "application_version": "8.11.2",
     "tier": "Silver",
     "http_endpoint": null,
     "status": "Pending",
     "provision_state": "Pending",
     "termination_lock": false,
     "plan_type": "DedicatedDeployment",
-    "plan": "NDN1-AWS-S",
+    "plan": "NDC4-GCP-G",
     "is_master_slave": false,
     "vpc_type": "Public",
     "vpc_name": "",
     "region_id": "us-west-1",
-    "cloud_provider": "Amazon Web Services",
-    "cloud_provider_id": "aws",
+    "cloud_provider": "Google Cloud",
+    "cloud_provider_id": "gcp",
     "num_additional_app_nodes": 0,
     "deployment_type": "Dedicated Node",
     "num_nodes_default": 1,
@@ -25,9 +25,9 @@
     "zookeeper_ensemble": null,
     "tag": [],
     "specifications": {
-      "jvm_heap_memory": "536870912",
-      "disk_space": "8589934592",
-      "physical_memory": "1073741824"
+        "jvm_heap_memory": "536870912",
+        "disk_space": "8589934592",
+        "physical_memory": "1073741824"
     },
     "backups_enabled": false,
     "dr_enabled": false,
@@ -38,8 +38,8 @@
     "application_nodes_count": 1,
     "selected_node_count": 0,
     "savings": {
-      "one_year_saving_perc": "52.38",
-      "three_year_saving_perc": "59.52"
+        "one_year_saving_perc": "52.38",
+        "three_year_saving_perc": "59.52"
     },
     "dr_plan_type": null,
     "subscription": "monthly",
@@ -52,4 +52,4 @@
     "dr": null,
     "payment_method": null,
     "purchase_order": null
-  }
+}
