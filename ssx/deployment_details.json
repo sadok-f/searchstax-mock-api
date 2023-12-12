@@ -14,7 +14,7 @@
   "vpc_type": "Public",
   "vpc_name": "",
   "region_id": "us-west-1",
-  "cloud_provider": "Google CLoud",
+  "cloud_provider": "Google Cloud",
   "cloud_provider_id": "gcp",
   "num_additional_app_nodes": 0,
   "deployment_type": "Dedicated Node",
@@ -38,7 +38,7 @@
   "sla_active": false,
   "state_changed": "1571931445",
   "term_end": null,
-  "date_created": "2019-10-24",
+  "date_created": "2023-01-25",
   "application_nodes_count": 1,
   "selected_node_count": 0,
   "savings": {
